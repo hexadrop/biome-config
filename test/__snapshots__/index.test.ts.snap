@@ -6,6 +6,12 @@ exports[`@hexadrop/biome-config biome check test.html 1`] = `
 	<head>
 		<meta charset="UTF-8" />
 		<title>Title</title>
+		<style>
+			.input {
+				font-size: 16px;
+				color: blue;
+			}
+		</style>
 	</head>
 	<body>
 		<input
