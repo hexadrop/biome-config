@@ -10,7 +10,7 @@ describe("@hexadrop/biome-config", () => {
 	let temporary: string;
 
 	beforeAll(async () => {
-		temporary = await mkdtemp(temporaryDirectory);
+		temporary = await mkdtemp(path.join(temporaryDirectory, "fixtures"));
 		await cp(fixtures, temporary, {
 			recursive: true,
 		});
@@ -18,6 +18,7 @@ describe("@hexadrop/biome-config", () => {
 
 	test.each(fixturesFiles)("biome check %s", async (file) => {
 		const temporaryFile = path.join(temporary, file);
+		console.log("temporary file", temporaryFile);
 		const subprocess = Bun.spawn(
 			[
 				"bun",
