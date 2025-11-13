@@ -10,11 +10,11 @@
 ## Installation
 
 ```bash
-npm install --save-dev eslint @hexadrop/biome-config
+npm install --save-dev @biomejs/biome @hexadrop/biome-config
 ```
 
 **Using bun**
 
 ```bash
-bun add eslint @hexadrop/biome-config --dev
+bun add @biomejs/biome @hexadrop/biome-config --dev
 ```
