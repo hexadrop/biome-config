@@ -17,7 +17,29 @@ exports[`@hexadrop/biome-config biome check test.html 1`] = `
 		<input
 			type="text"
 			class="input" />
+		<script>
+			document.querySelector(".input").value = "Hello, World!";
+			const a = false;
+			if (a) {
+				console.log("This will not be logged.");
+			}
+		</script>
 	</body>
 </html>
+"
+`;
+
+exports[`@hexadrop/biome-config biome check test.tsx 1`] = `
+"export default function Test() {
+	return (
+		<main>
+			<div>Hello, world!</div>
+			<input
+				className="input"
+				type="text"
+			/>
+		</main>
+	);
+}
 "
 `;
