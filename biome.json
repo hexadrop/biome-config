@@ -1,51 +1,12 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.3.5/schema.json",
-	"assist": {
-		"actions": {
-			"source": {
-				"organizeImports": "on",
-				"useSortedAttributes": "on",
-				"useSortedKeys": "on",
-				"useSortedProperties": "on"
-			}
-		},
-		"enabled": true
-	},
-	"formatter": {
-		"attributePosition": "multiline",
-		"bracketSameLine": true,
-		"bracketSpacing": true,
-		"enabled": true,
-		"expand": "always",
-		"formatWithErrors": false,
-		"indentStyle": "tab",
-		"indentWidth": 4,
-		"lineEnding": "auto",
-		"lineWidth": 120
-	},
-	"html": {
-		"experimentalFullSupportEnabled": true,
-		"formatter": {
-			"enabled": true,
-			"indentScriptAndStyle": true,
-			"selfCloseVoidElements": "always",
-			"whitespaceSensitivity": "css"
-		}
-	},
-	"overrides": [
-		{
-			"assist": {
-				"actions": {
-					"source": {
-						"useSortedKeys": "off"
-					}
-				}
-			},
-			"includes": [
-				"**/package.json",
-				"**/tsconfig.json",
-				"**/tsconfig.*.json"
-			]
-		}
-	]
+	"extends": [
+		"./biome.rules.json"
+	],
+	"files": {
+		"includes": [
+			"**/*",
+			"!fixtures"
+		]
+	}
 }

@@ -23,13 +23,13 @@
 	"license": "MIT",
 	"type": "module",
 	"files": [
-		"dist"
+		"biome.rules.json"
 	],
 	"publishConfig": {
 		"access": "public"
 	},
 	"exports": {
-		"./biome": "./biome.json"
+		"./biome": "./biome.rules.json"
 	},
 	"scripts": {
 		"lint": "biome check",
