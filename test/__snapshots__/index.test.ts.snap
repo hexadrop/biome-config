@@ -7,7 +7,11 @@ exports[`@hexadrop/biome-config biome check test.html 1`] = `
 		<meta charset="UTF-8" />
 		<title>Title</title>
 	</head>
-	<body></body>
+	<body>
+		<input
+			type="text"
+			class="input" />
+	</body>
 </html>
 "
 `;
