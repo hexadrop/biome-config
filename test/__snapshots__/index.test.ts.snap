@@ -1,5 +1,40 @@
 // Bun Snapshot v1, https://bun.sh/docs/test/snapshots
 
+exports[`@hexadrop/biome-config biome check test.json 1`] = `
+"{
+	"key1": "value1",
+	"key2": "value2",
+	"key13": "value1",
+	"nested": {
+		"a": 1,
+		"b": 2,
+		"c": {
+			"d": 4,
+			"e": 5
+		}
+	}
+}
+"
+`;
+
+exports[`@hexadrop/biome-config biome check test.ts 1`] = `
+"const arr = [
+	1,
+	2
+];
+
+const value = 'hello';
+
+const fil = arr.filter(num => num > 1);
+const fil2 = arr.filter((_num, index) => index % 2 === 0);
+
+console.log(fil);
+console.log(fil2);
+
+console.log(\`\${value} world\`);
+"
+`;
+
 exports[`@hexadrop/biome-config biome check test.html 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
@@ -18,10 +53,10 @@ exports[`@hexadrop/biome-config biome check test.html 1`] = `
 			type="text"
 			class="input" />
 		<script>
-			document.querySelector(".input").value = "Hello, World!";
+			document.querySelector('.input').value = 'Hello, World!';
 			const a = false;
 			if (a) {
-				console.log("This will not be logged.");
+				console.log('This will not be logged.');
 			}
 		</script>
 	</body>
@@ -35,8 +70,8 @@ exports[`@hexadrop/biome-config biome check test.tsx 1`] = `
 		<main>
 			<div>Hello, world!</div>
 			<input
-				className="input"
-				type="text"
+				className='input'
+				type='text'
 			/>
 		</main>
 	);
