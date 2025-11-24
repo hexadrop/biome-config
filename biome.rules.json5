@@ -93,7 +93,9 @@
 			"jsxEverywhere": false,
 			"unsafeParameterDecoratorsEnabled": false
 		},
-		"globals": [],
+		"globals": [
+			"Bun"
+		],
 	},
 	"json": {
 		"assist": {
