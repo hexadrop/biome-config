@@ -771,14 +771,14 @@
 				},
 				"noMisusedPromises": {
 					"fix": "unsafe",
-					"level": "warn" // Default: "info"
+					"level": "off" // Original: "warn" Default: "info" TODO: Disable due to fil
 				},
 				"noNextAsyncClientComponent": {
 					"level": "warn"
 				},
 				"noParametersOnlyUsedInRecursion": {
 					"fix": "unsafe",
-					"level": "warn"
+					"level": "off" // Original: "warn" TODO: Disable due to fil
 				},
 				"noReactForwardRef": {
 					"fix": "unsafe",
@@ -844,7 +844,7 @@
 					"level": "warn" // Default: "info"
 				},
 				"useExplicitType": {
-					"level": "error"
+					"level": "off" // Default: "error". TODO: Depends on https://github.com/biomejs/biome/pull/8246
 				},
 				"useFind": {
 					"level": "error" // Default: "info"
