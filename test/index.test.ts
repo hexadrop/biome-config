@@ -1,34 +1,35 @@
-import { afterAll, beforeAll, describe, expect, test } from "bun:test";
-import { cp, mkdtemp, readdir, rm } from "node:fs/promises";
-import path from "node:path";
-import temporaryDirectory from "temp-dir";
+import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
+import { cp, mkdtemp, readdir, rm } from 'node:fs/promises';
+import path from 'node:path';
+import process from 'node:process';
+import temporaryDirectory from 'temp-dir';
 
-const fixtures = path.join(process.cwd(), "fixtures");
+const fixtures = path.join(process.cwd(), 'fixtures');
 const fixturesFiles = await readdir(fixtures);
 
-describe("@hexadrop/biome-config", () => {
+describe('@hexadrop/biome-config', () => {
 	let temporary: string;
 
 	beforeAll(async () => {
-		temporary = await mkdtemp(path.join(temporaryDirectory, "fixtures"));
+		temporary = await mkdtemp(path.join(temporaryDirectory, 'fixtures'));
 		await cp(fixtures, temporary, {
-			recursive: true,
+			recursive: true
 		});
 	});
 
-	test.each(fixturesFiles)("biome check %s", async (file) => {
+	test.each(fixturesFiles)('biome check %s', async file => {
 		const temporaryFile = path.join(temporary, file);
 		const subprocess = Bun.spawn(
 			[
-				"bun",
-				"biome",
-				"check",
-				"--write",
-				temporaryFile,
+				'bun',
+				'biome',
+				'check',
+				'--write',
+				temporaryFile
 			],
 			{
-				cwd: process.cwd(),
-			},
+				cwd: process.cwd()
+			}
 		);
 
 		const result = await subprocess.exited;
@@ -44,7 +45,7 @@ describe("@hexadrop/biome-config", () => {
 		if (temporary) {
 			await rm(temporary, {
 				force: true,
-				recursive: true,
+				recursive: true
 			});
 		}
 	});
