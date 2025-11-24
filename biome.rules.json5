@@ -797,7 +797,7 @@
 					"level": "error" // Default: "warn"
 				},
 				"noUnresolvedImports": {
-					"level": "error" // Default: "info"
+					"level": "off" // Original: "error" Default: "info". TODO: Dont detect 'node:*'
 				},
 				"noUnusedExpressions": {
 					"level": "error" // Default: "info"
