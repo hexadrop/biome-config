@@ -1,8 +1,10 @@
 {
-	"changesets": [],
-	"initialVersions": {
-		"@hexadrop/biome-config": "0.0.0"
-	},
-	"mode": "pre",
-	"tag": "beta"
+  "changesets": [
+    "tired-taxis-scream"
+  ],
+  "initialVersions": {
+    "@hexadrop/biome-config": "0.0.0"
+  },
+  "mode": "pre",
+  "tag": "beta"
 }
